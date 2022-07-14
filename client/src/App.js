@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,7 +14,11 @@ function App() {
 
 
   return (
+    <BrowserRouter>
     <div className="App">
+      <Switch>
+        <Route path="/testing">
+          <h1>Test Route</h1>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -28,10 +33,13 @@ function App() {
           Learn React
         </a>
       </header>
-      <div className="App">
-        <h1>Page Count: {count}</h1>
-      </div>
+        </Route>
+        <Route path="/">
+          <h1>Page Count: {count}</h1>
+        </Route>
+      </Switch>
     </div>
+    </BrowserRouter>
   );
 }
 
