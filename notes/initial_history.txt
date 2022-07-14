@@ -1,0 +1,12 @@
+ 5187  rails new circles -T --api
+ 5199  vi Gemfile
+ 5200  bundle add active_model_serializers
+ 5201  vi Gemfile
+ 5202  bundle install
+ 5204  bash ~/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code .
+ 5207* rails s
+ 5208  git status
+ 5211  vi .gitignore
+ 5213  vi Gemfile
+ 5218  git add .
+ 5219  git commit -m 'Rails setup plus some initial config'
